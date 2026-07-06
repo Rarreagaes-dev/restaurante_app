@@ -22,3 +22,4 @@ class Cliente:
             f"Correo: {self.correo} | "
             f"Tipo: {tipo}"
         )
+        
