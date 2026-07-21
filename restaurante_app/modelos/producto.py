@@ -24,3 +24,4 @@ class Producto:
             f"Precio: ${self.__precio:.2f}\n"
             f"Estado: {estado}"
         )
+        
