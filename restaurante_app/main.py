@@ -1,59 +1,47 @@
 # Punto de inicio del programa.
 
-from modelos.producto import Producto
-from modelos.cliente import Cliente
+from modelos.platillo import Platillo
+from modelos.bebida import Bebida
 from servicios.restaurante import Restaurante
 
 
-# Crear el restaurante
 restaurante = Restaurante("Sabores del Pacífico")
 
 
-# Crear productos
-producto1 = Producto(
+platillo1 = Platillo(
     "Arroz Marinero",
-    "Plato fuerte",
     8.50,
-    True
+    True,
+    650
 )
 
-producto2 = Producto(
-    "Limonada Natural",
-    "Bebida",
-    2.25,
-    True
-)
-
-
-# Crear clientes
-cliente1 = Cliente(
-    "María López",
-    28,
-    "maria@gmail.com",
-    True
-)
-
-cliente2 = Cliente(
-    "Carlos Pérez",
-    35,
-    "carlos@gmail.com",
-    False
+platillo2 = Platillo(
+    "Seco de Pollo",
+    7.25,
+    True,
+    580
 )
 
 
-# Agregar productos al restaurante
-restaurante.agregar_producto(producto1)
-restaurante.agregar_producto(producto2)
+bebida1 = Bebida(
+    "Limonada",
+    2.50,
+    True,
+    500
+)
+
+bebida2 = Bebida(
+    "Jugo de Mora",
+    3.00,
+    True,
+    400
+)
 
 
-# Agregar clientes al restaurante
-restaurante.agregar_cliente(cliente1)
-restaurante.agregar_cliente(cliente2)
+restaurante.agregar_producto(platillo1)
+restaurante.agregar_producto(platillo2)
+restaurante.agregar_producto(bebida1)
+restaurante.agregar_producto(bebida2)
 
-
-# Mostrar información
-print(restaurante)
 
 restaurante.mostrar_productos()
-
-restaurante.mostrar_clientes()
